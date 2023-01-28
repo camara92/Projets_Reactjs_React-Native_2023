@@ -36,3 +36,40 @@
     transform: rotate(360deg);
   }
 }
+
+/* css pour le header  */
+
+body{
+  background-color: #000;
+  color: #fff;
+  margin-top: 5rem;
+}
+.bg-header{
+  background-color: #111;
+
+}
+.navbar-nav .nav-link{
+  color: #cbd5db !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #fff !important;
+ 
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: 500;
+
+}
+.card-header{
+  color : black;
+}
+
+/* animation  */
+.card-small{
+  transition: all ease-in-out .5s;
+}
+.card-small:hover{
+  transform: scale(1.15);
+}
+/* fin d'effet transformation de la card  */

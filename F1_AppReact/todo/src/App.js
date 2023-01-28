@@ -1,10 +1,15 @@
 
 import './App.css';
 import BonjourComponent from './component/BonjourComponent';
+import Navbar from './navbar/header';
 
 function App() {
   return (
-    <div className='text-danger text-decoration-dotted bg-dark text-white '>
+    <div className=''>
+
+    {/* header  */}
+   <Navbar />
+
       <BonjourComponent />
 
      
