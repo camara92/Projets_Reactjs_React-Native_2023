@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <div>
+    <div className='my-5'>
        <header>
     <nav className="navbar navbar-dark fixed-top bg-header navbar-expand-md">
       <div className="container">
@@ -16,9 +16,10 @@ export default function Navbar() {
           <div className="navbar-nav mr-auto ">
             <a className="navbar-item nav-link" href="">Home </a>
             <a className="navbar-item nav-link" href="">Mes services  </a>
+            <a className="navbar-item nav-link" href="">Links  </a>
         </div>
           <div>
-            <div className="navbar-nav me-2">
+            <div className="navbar-nav">
               <a className="navbar-item nav-link" href="">Connexion </a>
               <a className="navbar-item nav-link" href="">Inscription </a>
             </div>

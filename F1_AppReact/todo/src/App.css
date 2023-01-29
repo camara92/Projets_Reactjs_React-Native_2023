@@ -40,7 +40,8 @@
 /* css pour le header  */
 
 body{
-  background-color: #000;
+  /* background-color: #000 !important; */
+  /* background en important pour le mettre en noir  */
   color: #fff;
   margin-top: 5rem;
 }
