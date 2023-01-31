@@ -7,7 +7,7 @@ import Navbar from './navbar/header';
 function App(props) {
 const menu = props.tableau.map((p)=> {
 
-  return <BonjourComponent presentation = {p} /> 
+  return <BonjourComponent presentation = {p}  key = {p.id} /> 
 })
   return (
     <div className=''>

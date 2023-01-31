@@ -10,23 +10,28 @@ import 'bootstrap/dist/css/bootstrap.css';
 const data =[
   {
     prenom: 'Daouda', 
-    nom: 'CAMARA'
+    nom: 'CAMARA',
+    id:0
   },
   {
     prenom: 'Daniel', 
-    nom: 'Caramoko'
+    nom: 'Caramoko',
+    id:1
   },
   {
     prenom: 'Steve', 
-    nom: 'Albert'
+    nom: 'Albert',
+    id:2
   },
   {
     prenom: 'Diougoula', 
-    nom: 'Albert'
+    nom: 'Albert',
+    id:3
   },
   {
     prenom: 'Diallo', 
-    nom: 'Albert'
+    nom: 'Albert',
+    id:4
   }
 ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
