@@ -74,3 +74,7 @@ body{
   transform: scale(1.15);
 }
 /* fin d'effet transformation de la card  */
+
+p{
+  font-size: 15px;
+}

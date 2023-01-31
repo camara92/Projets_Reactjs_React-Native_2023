@@ -5,7 +5,10 @@ import Navbar from './navbar/header';
 
 
 function App(props) {
+const menu = props.tableau.map((p)=> {
 
+  return <BonjourComponent presentation = {p} /> 
+})
   return (
     <div className=''>
 
@@ -13,9 +16,10 @@ function App(props) {
       <Navbar />
 
 
-      <BonjourComponent presentation={props.tableau[0]} gras={true} />
+      {/* <BonjourComponent presentation={props.tableau[0]} gras={true} />
       <BonjourComponent presentation={props.tableau[1]} gras={false} />
-      <BonjourComponent presentation={props.tableau[2]} gras={true} />
+      <BonjourComponent presentation={props.tableau[2]} gras={true} /> */}
+      {menu}
 
 
 

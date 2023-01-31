@@ -19,6 +19,14 @@ const data =[
   {
     prenom: 'Steve', 
     nom: 'Albert'
+  },
+  {
+    prenom: 'Diougoula', 
+    nom: 'Albert'
+  },
+  {
+    prenom: 'Diallo', 
+    nom: 'Albert'
   }
 ]
 const root = ReactDOM.createRoot(document.getElementById('root'));
