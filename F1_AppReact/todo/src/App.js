@@ -19,8 +19,13 @@ const menu = props.tableau.map((p)=> {
       {/* <BonjourComponent presentation={props.tableau[0]} gras={true} />
       <BonjourComponent presentation={props.tableau[1]} gras={false} />
       <BonjourComponent presentation={props.tableau[2]} gras={true} /> */}
-      {menu}
+      {/* {menu} */}
 
+      {props.tableau.map((p)=> {
+
+return <BonjourComponent presentation = {p}  key = {p.id} /> 
+})
+}
 
 
     </div>
