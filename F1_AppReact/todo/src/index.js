@@ -7,10 +7,24 @@ import 'bootstrap/dist/css/bootstrap.css';
 // Put any other imports below so that CSS from your
 // components takes precedence over default styles.
 
+const data =[
+  {
+    prenom: 'Daouda', 
+    nom: 'CAMARA'
+  },
+  {
+    prenom: 'Daniel', 
+    nom: 'Caramoko'
+  },
+  {
+    prenom: 'Steve', 
+    nom: 'Albert'
+  }
+]
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <App tableau = {data} />
   </React.StrictMode>
 );
 

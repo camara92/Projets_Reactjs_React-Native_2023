@@ -1,8 +1,10 @@
-import React from 'react'
+import React, {Component} from 'react'
 
-function BonjourComponent() {
 
-  const data =[
+
+ class BonjourComponent extends Component {
+
+tableau =[
     {
       prenom: 'Daouda', 
       nom: 'CAMARA'
@@ -16,18 +18,42 @@ function BonjourComponent() {
       nom: 'Albert'
     }
   ]
+  constructor(props){
+    super(props)
+    this.state= {
+      gras: true
+    }
   
-    return (
-      <div className='container'> 
+    this.toggleGras= this.toggleGras.bind(this)
+  }
+  toggleGras(){
+    this.setState(
+      {
+      gras: !this.state.gras
+    } 
+    )
+  }
 
-        <h1>Bonjour  {data[0].nom } {data[0].prenom }</h1>
+
+
+  
+  render() {
+    return (
+      <div className='container my-3'> 
+
+        {/* <h1>Bonjour  {tableau[0].nom } {tableau[0].prenom }</h1> */}
+        <br></br>
+        <p className='mt-4' style={{fontWeight: this.props.gras ? 'bold' : 'normal'}}  onClick ={this.toggleGras}>
+      Bonjour  {this.props.presentation.nom } {this.props.presentation.prenom }
+
+      </p>
       </div>
     )
   
 }
 
 
-
+ }
 
 export default BonjourComponent; 
 
