@@ -2,3 +2,9 @@
 body{
   font-family: cursive;
 }
+li{
+  width: 300px;
+}
+.barrer{
+  text-decoration: line-through;
+}

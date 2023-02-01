@@ -2,14 +2,32 @@ import React, { Component } from 'react'
 import { TODO } from '../shared/faire'
 
 
-function Todo({liste}) {
+function Todo(props ) {
+
     return (
       <div>
         <ul className='list-unstyled'>
             {
-            liste.map((t)=>{
+            props.liste.map((t)=>{
+                if(props.do.some(id=>t.id)){
+                    // verif si id es dans tab
+                return(
+                
+                <li className='border mt-2 p-2 barrer' key={t.id} >
+                    
+                     <strong> {t.purpose} </strong>  {t.text} 
+                     
+                </li>)
+                }else{
+                    return(
+                
+                        <li className='border mt-2 p-2 nonbarrer' key={t.id} >
+                            
+                             <strong> {t.purpose} </strong>  {t.text} 
+                             
+                        </li>)
 
-                return(<li key={t.id}> <strong> {t.purpose} </strong>  {t.text} </li>)
+                }
 
             })
             
@@ -21,3 +39,5 @@ function Todo({liste}) {
 
 
   export default Todo; 
+
+//   au click on barre la liste 
