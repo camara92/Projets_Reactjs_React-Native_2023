@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { VERSETS } from '../shared/data'
 
-export default class MeditationComponent extends Component {
+export default class AtlasReadingComponent extends Component {
     constructor(props){
         super(props)
     }

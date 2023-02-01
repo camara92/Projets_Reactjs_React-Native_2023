@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css';
+import AtlasReadingComponent from './component/AtlasReading';
 
 import MeditationComponent from './component/AtlasReading';
 import Navbar from './navbar/header';
@@ -36,7 +37,7 @@ render() {
         <div className='col-4' id='divTitres'>
 
         {VERSETS.map((v)=>{
-        return (<MeditationComponent verset={v}  click = {this.selectionneMeditation }  />)
+        return (<AtlasReadingComponent verset={v}  click = {this.selectionneMeditation }  />)
       })}
 
         </div>
@@ -45,7 +46,7 @@ render() {
         </div>
       </div>
     
-      {/* <MeditationComponent verset = {VERSETS[0]}  /> */}
+      {/* <AtlasReadingComponent verset = {VERSETS[0]}  /> */}
     </div>
   );
 }
