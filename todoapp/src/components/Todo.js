@@ -2,13 +2,15 @@ import React, { Component } from 'react'
 import { TODO } from '../shared/faire'
 
 
-export default class Todo extends Component {
-  render() {
+function Todo({liste}) {
     return (
       <div>
         <ul className='list-unstyled'>
-            {TODO.map((t)=>{
-                return(<li key={t.id}> <stron> {t.purpose} </stron>  {t.text} </li>)
+            {
+            liste.map((t)=>{
+
+                return(<li key={t.id}> <strong> {t.purpose} </strong>  {t.text} </li>)
+
             })
             
             }
@@ -16,4 +18,6 @@ export default class Todo extends Component {
       </div>
     )
   }
-}
+
+
+  export default Todo; 
