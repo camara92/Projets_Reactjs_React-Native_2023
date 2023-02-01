@@ -21,10 +21,14 @@ tableau =[
   constructor(props){
     super(props)
     this.state= {
-      gras: true
+      gras:false
     }
   
     this.toggleGras= this.toggleGras.bind(this)
+  }
+
+  componentDidMount(){
+    this.setState({gras:true})
   }
   toggleGras(){
     this.setState(
