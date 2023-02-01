@@ -1,35 +1,59 @@
-
+import React, { Component } from 'react'
 import './App.css';
-import BonjourComponent from './component/BonjourComponent';
+
+import MeditationComponent from './component/AtlasReading';
 import Navbar from './navbar/header';
+import { VERSETS } from './shared/data';
 
 
-function App(props) {
-const menu = props.tableau.map((p)=> {
+class  App  extends Component  {
 
-  return <BonjourComponent presentation = {p}  key = {p.id} /> 
-})
-  return (
-    <div className=''>
+constructor(props) {
 
-      {/* header  */}
-      <Navbar />
+super(props);
+// etat 
+this.state = {
+  titreSelectionne : null
+}
+this.selectionneMeditation = this.selectionneMeditation.bind(this)
 
-
-      {/* <BonjourComponent presentation={props.tableau[0]} gras={true} />
-      <BonjourComponent presentation={props.tableau[1]} gras={false} />
-      <BonjourComponent presentation={props.tableau[2]} gras={true} /> */}
-      {/* {menu} */}
-
-      {props.tableau.map((p)=> {
-
-return <BonjourComponent presentation = {p}  key = {p.id} /> 
-})
 }
 
+selectionneMeditation(verset){
+  this.setState({
+    titreSelectionne : verset.libele
+  })
+}
 
+render() {
+
+
+  return (
+    <div className='container '>
+      <Navbar />
+      <br></br>
+      <div className='row'>
+        <div className='col-4' id='divTitres'>
+
+        {VERSETS.map((v)=>{
+        return (<MeditationComponent verset={v}  click = {this.selectionneMeditation }  />)
+      })}
+
+        </div>
+        <div className='col-8 mt-3' id='divLibele' >
+          <FLibele  libele = {this.state.titreSelectionne } />
+        </div>
+      </div>
+    
+      {/* <MeditationComponent verset = {VERSETS[0]}  /> */}
     </div>
   );
 }
+}
 
+function FLibele(props){
+  return(
+    <p className='text-cent'> {props.libele } </p>
+  )
+}
 export default App;

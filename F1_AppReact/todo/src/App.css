@@ -75,6 +75,25 @@ body{
 }
 /* fin d'effet transformation de la card  */
 
-p{
+.pTitre{
   font-size: 15px;
+  width:  300px;
+  border: 1px solid red;
+  background-color: red;
+  color: white;
+}
+.row {
+  height: 600px;
+  /* border: 2px solid green; */
+}
+
+#divTitres{
+  height: 100%;
+
+  
+}
+#divLibele {
+  border: 2px solid rgb(164, 172, 164);
+  background-color: green;
+  color: white;
 }
