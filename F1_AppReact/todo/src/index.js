@@ -32,6 +32,11 @@ const data =[
     prenom: 'Diallo', 
     nom: 'Albert',
     id:4
+  },
+  {
+    prenom: 'Diallo', 
+    nom: 'Albert',
+    id:5
   }
 ]
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -40,9 +40,10 @@ tableau =[
   render() {
     return (
       <div className='container my-3'> 
+      <br></br>
 
         {/* <h1>Bonjour  {tableau[0].nom } {tableau[0].prenom }</h1> */}
-        <br></br>
+     
         <p className='mt-4' style={{fontWeight: this.props.gras ? 'bold' : 'normal'}}  onClick ={this.toggleGras}>
       Bonjour  {this.props.presentation.nom } {this.props.presentation.prenom }
 
