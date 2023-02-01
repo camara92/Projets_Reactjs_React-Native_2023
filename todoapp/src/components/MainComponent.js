@@ -7,7 +7,7 @@ export default class MainComponent extends Component {
 
         this.state = {
             todo : TODO, 
-            do: [4]
+            do: []
         }
         this.toggleTodo = this.toggleTodo.bind(this)
     }

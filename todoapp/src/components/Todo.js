@@ -9,11 +9,11 @@ function Todo(props ) {
         <ul className='list-unstyled'>
             {
             props.liste.map((t)=>{
-                if(props.do.some(id=>t.id)){
+                if(props.do.some(id=>id ===t.id)){
                     // verif si id es dans tab
                 return(
                 
-                <li className='border mt-2 p-2 barrer' key={t.id} >
+                <li className='border mt-2 p-2 barrer' key={t.id}  onClick = {()=> props.toggleTodo(t.id)}>
                     
                      <strong> {t.purpose} </strong>  {t.text} 
                      
@@ -21,7 +21,7 @@ function Todo(props ) {
                 }else{
                     return(
                 
-                        <li className='border mt-2 p-2 nonbarrer' key={t.id} >
+                        <li className='border mt-2 p-2 nonbarrer' key={t.id} onClick = {()=> props.toggleTodo(t.id)}>
                             
                              <strong> {t.purpose} </strong>  {t.text} 
                              
