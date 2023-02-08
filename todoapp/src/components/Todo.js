@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { TODO } from '../shared/faire'
+import React from 'react'
+// import { TODO } from '../shared/faire'
 
 
 function Todo(props ) {
@@ -9,7 +9,7 @@ function Todo(props ) {
         <ul className='list-unstyled'>
             {
             props.liste.map((t)=>{
-                if(props.do.some(id=>id ===t.id)){
+              
                     // verif si id es dans tab
                 return(
                 
@@ -18,16 +18,10 @@ function Todo(props ) {
                      <strong> {t.purpose} </strong>  {t.text} 
                      
                 </li>)
-                }else{
-                    return(
-                
-                        <li className='border mt-2 p-2 nonbarrer' key={t.id} onClick = {()=> props.toggleTodo(t.id)}>
-                            
-                             <strong> {t.purpose} </strong>  {t.text} 
-                             
-                        </li>)
+              
+                   
 
-                }
+             
 
             })
             

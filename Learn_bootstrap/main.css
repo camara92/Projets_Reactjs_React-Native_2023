@@ -29,6 +29,6 @@ body{
     transition: all ease-in-out .5s;
 }
 .card-small:hover{
-    transform: scale(1.15);
+    transform: scale(1.1);
 }
 /* fin d'effet transformation de la card  */
