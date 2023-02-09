@@ -15,3 +15,27 @@ export const toggleTodo = (id)=>({
     payload: {id: id}
 
 })
+
+
+
+export const setFilter = (id)=>{
+    switch(id){
+        case 0: 
+        return ({
+            type: actionTypes.SHOW_ALL
+        })
+
+        case 1: 
+        return ({
+            type: actionTypes.SHOW_ACTIVE
+        })
+
+        case 2: 
+        return ({
+            type: actionTypes.SHOW_COMPLETED
+        })
+
+
+        
+    }
+}

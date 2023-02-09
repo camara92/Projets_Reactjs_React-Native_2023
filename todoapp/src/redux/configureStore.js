@@ -1,14 +1,20 @@
 // import {createStore} from 'reduxjs/toolkit'
-import {createStore} from 'redux'
+import {createStore, combineReducers} from 'redux'
+import { Filters } from './filterRedux'
+import { todoRedux, initialState } from './todoRedux'
 
-import { Reducer, initialState } from './Reducer'
+
+// combinreducer : docs 
 
 export const ConfigureStore = ()=> {
     const store = createStore(
-        //reducer
-       Reducer, 
-        // initialiseState
-        initialState
+  
+    
+        combineReducers({
+                Todo : todoRedux, 
+                Filters: Filters
+        })
+    
         
     )
     return store

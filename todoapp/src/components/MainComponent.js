@@ -8,10 +8,10 @@ import Filter from './Filter'
 
 const mapStateToProps = state => {
     return({
-        todo: state.Todo
+        todo: state.Todo.Todo,
+        filters : state.Filters
     })
 }
-
 const mapDispatchToProps = dispatch => {
     return ({
         addTodo: (purpose, text)=> dispatch(addTodo(purpose, text)), 

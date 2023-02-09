@@ -7,7 +7,7 @@ export const initialState = {
     Todo: TODO
 }
 
-export const Reducer = (state = initialState, action) => {
+export const todoRedux = (state = initialState, action) => {
     // return state
 
     switch (action.type) {
