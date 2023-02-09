@@ -3,7 +3,8 @@ import Todo from './Todo'
 import AddTodo from './FormComponent'
 import { connect } from 'react-redux'
 import {addTodo, toggleTodo } from '../redux/ActionCreator'
-// connect permet de connecter le constant au redux 
+import Filter from './Filter'
+
 
 const mapStateToProps = state => {
     return({
@@ -32,6 +33,7 @@ class MainComponent extends Component {
                     <div className='col-md-8 col-12'>
 
                         <AddTodo addTodo ={this.props.addTodo } />
+                        <Filter />
                     </div>
                 </div>
             </div>
