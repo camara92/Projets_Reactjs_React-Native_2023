@@ -8,7 +8,7 @@ const store = ConfigureStore()
 
 function App() {
   return (
-    // <div className="App">
+    
     <Provider store={store}>
 
 
